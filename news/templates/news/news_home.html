@@ -1,0 +1,31 @@
+{% extends 'mainapp/layout.html' %}
+
+{% block title %}
+News
+
+{% endblock %}
+
+{% block content %}
+<div class = "features">
+
+    <h1>Новости на сайте</h1>
+<button class="btn btn-warning">на страницу</button>
+{%if news%}
+    {%for item in news%}
+        <div class="alert alert-warning">
+            <h3>{{item.title}}</h3>
+            <p>{{item.anons}}</p>
+            <a href="{% url 'news_detail' item.id %}" class="btn btn-warning">Читать далее</a>
+            </div>
+            {%endfor%}
+{% else %}
+            <p>НОВОСТЕЙ НЕТ!!!</p>
+
+            {%endif%}
+        {# комментарий #}
+
+
+
+
+</div>
+{% endblock %}

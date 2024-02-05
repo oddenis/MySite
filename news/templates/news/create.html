@@ -1,0 +1,20 @@
+{% extends 'mainapp/layout.html' %}
+
+{% block title %}
+Добавление новости
+{% endblock %}
+
+{% block content %}
+<div class = "features">
+
+    <h1>Добавить новость</h1>
+    <form method="post">
+        <input type="text" placeholder="Название статьи" class = "form-control"><br>
+        <input type="text" placeholder="Анонс статьи" class = "form-control"><br>
+        <textarea type="text" placeholder="Текст статьи" class = "form-control"></textarea><br>
+        <input type="date" placeholder="Дата" class = "form-control"><br>
+        <input type="time" placeholder="Время" class = "form-control"><br>
+        <button class="btn btn-success" type="submit">Создать</button>
+    </form>
+</div>
+{% endblock %}
